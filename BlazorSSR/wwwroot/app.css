@@ -1,5 +1,21 @@
+﻿@font-face {
+    font-family: 'IranSansLight';
+    src: url('iransansweb(fanum)_light.ttf') format('truetype');
+}
+
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: IranSansLight !important;
+    font-size: 18px;
+}
+
+.form-control:focus {
+    outline: none !important;
+    /*box-shadow: none !important;*/
+    box-shadow: var(--bs-box-shadow-sm) !important;
+}
+
+.dp {
+    direction: ltr;
 }
 
 a, .btn-link {
@@ -13,7 +29,7 @@ a, .btn-link {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 .content {

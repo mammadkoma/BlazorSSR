@@ -4,16 +4,27 @@
 		<TargetFramework>net9.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<CETCompat>false</CETCompat>
+		<CetCompat>false</CetCompat>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Content Include="Components\Layout\MainLayout.razor.js" />
-	  <Content Include="Components\Pages\Home.razor.js" />
+	  <None Remove="Components\Share\SubmitBtn - Copy.razor.js" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Components\Layout\MainLayout.razor.js" />
+		<Content Include="Components\Pages\Home.razor.js" />
+		<Content Include="Components\Share\PageHeader.razor.js" />
+		<Content Include="Components\Share\SubmitBtn.razor.js" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="BlazorPageScript" Version="1.0.0" />
+		<PackageReference Include="MudBlazor" Version="8.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\lib\" />
 	</ItemGroup>
 
 </Project>

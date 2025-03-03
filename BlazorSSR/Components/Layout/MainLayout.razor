@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+<MudThemeProvider Theme="MyCustomTheme" />
 <PageScript Src="./Components/Layout/MainLayout.razor.js" />
 
 <div class="page">
@@ -16,3 +17,16 @@
         </article>
     </main>
 </div>
+
+@code {
+    MudTheme MyCustomTheme = new MudTheme()
+        {
+            Typography = new Typography()
+            {
+                Default = new DefaultTypography()
+                {
+                    FontFamily = new[] { "IranSansLight" }
+                }
+            }
+        };
+}

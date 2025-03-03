@@ -1,0 +1,15 @@
+﻿﻿<PageScript Src="./Components/Share/SubmitBtn.razor.js" />
+
+<div class="col-lg-8 col-12 mt-2 d-flex justify-content-center">
+    <MudButton id="submitBtn" ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Success" Class="w-50" Disabled="@Disabled">
+        <div id="submitText">ارسال</div>
+        <div id="loadingText" class="d-flex d-none align-items-center">
+            <span class="spinner-border spinner-border-sm me-2"></span>
+            <span>پردازش ...</span>
+        </div>
+    </MudButton>
+</div>
+
+@code {
+    [Parameter] public bool Disabled { get; set; } = false;
+}

@@ -1,7 +1,32 @@
 ﻿@page "/"
-<PageTitle>Home</PageTitle>
+<PageTitle>صفحه اصلی</PageTitle>
 <PageScript Src="./Components/Pages/Home.razor.js" />
 
-<h1>Hello</h1>
+<PageHeader Title="صفحه اصلی" />
 
-<input data-jdp />
+<div class="d-flex justify-content-center">
+    <div class="col-md-4 col-12">
+        <EditForm method="post" Model="vm" FormName="register" OnValidSubmit="Submit" Enhance>
+            <DataAnnotationsValidator />
+
+            @* FullName *@
+            <div class="form-floating mb-3">
+                <InputText autofocus @bind-Value="vm.FullName" class="form-control" placeholder />
+                <label>نام و نام خانوادگی</label>
+                <ValidationMessage For="() => vm.FullName" class="text-danger" />
+            </div>
+
+            @* BirthDate *@
+            <div class="form-floating mb-3">
+                <InputText data-jdp autofocus @bind-Value="vm.BirthDate" class="form-control dp" placeholder />
+                <label>تاریخ تولد</label>
+                <ValidationMessage For="() => vm.BirthDate" class="text-danger" />
+            </div>
+
+            @* Submit Button *@
+            <div class="d-flex justify-content-center">
+                <SubmitBtn />
+            </div>
+        </EditForm>
+    </div>
+</div>
