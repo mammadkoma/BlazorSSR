@@ -1,8 +1,8 @@
 ﻿export function onLoad() {
     jalaliDatepicker.startWatch();
+}
 
-    console.log('MainLayout.razor.js loaded');
-
+export function onUpdate() {
     let inputs = document.getElementsByClassName('dp');
     for (let i = 0; i < inputs.length; i++) {
         inputs[i].addEventListener('input', (event) => {
@@ -12,7 +12,5 @@
         });
     }
 }
-
-export function onUpdate() { }
 
 export function onDispose() { }

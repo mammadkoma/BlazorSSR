@@ -24,6 +24,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Data\Entities\" />
+	  <Folder Include="Services\" />
 	  <Folder Include="wwwroot\lib\" />
 	</ItemGroup>
 
