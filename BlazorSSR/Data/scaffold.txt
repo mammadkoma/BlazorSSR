@@ -1,0 +1,6 @@
+﻿dotnet ef dbcontext scaffold "Server=.\SQLExpress2022;Database=BlazorSsrDb;Trusted_Connection=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer --no-onconfiguring -o Data/Entities --context-dir Data -c AppDbContext -f
+
+dotnet ef dbcontext scaffold "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BlazorSsrDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False" Microsoft.EntityFrameworkCore.SqlServer --no-onconfiguring -o Data/Entities --context-dir Data -c AppDbContext -f
+
+dotnet tool install dotnet-ef
+dotnet tool update dotnet-ef
